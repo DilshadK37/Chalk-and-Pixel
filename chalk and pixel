@@ -1,53 +1,55 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Visuals by Dilshad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 p-6">
 
-export default function HomePage() {
-  return (
-    <main className="min-h-screen bg-white text-gray-800 p-6">
-      {/* Hero Section */}
-      <section className="text-center py-16">
-        <motion.h1 
-          className="text-4xl md:text-6xl font-bold mb-4"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          Creative Visuals by Dilshad
-        </motion.h1>
-        <p className="text-lg md:text-xl mb-6">Turning Ideas into Art</p>
-        <Button className="text-lg px-6 py-2">View Portfolio</Button>
-      </section>
+  <!-- Hero Section -->
+  <section class="text-center py-16">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+      Creative Visuals by Dilshad
+    </h1>
+    <p class="text-lg md:text-xl mb-6">Turning Ideas into Art</p>
+    <a href="#portfolio" class="bg-black text-white px-6 py-2 text-lg rounded hover:bg-gray-800 transition">View Portfolio</a>
+  </section>
 
-      {/* Portfolio Section */}
-      <section className="py-12">
-        <h2 className="text-3xl font-semibold mb-8 text-center">My Work</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <Card key={item} className="hover:scale-105 transition-transform">
-              <CardContent className="p-0">
-                <img
-                  src={`https://via.placeholder.com/600x400?text=Project+${item}`}
-                  alt={`Project ${item}`}
-                  className="w-full h-auto rounded-t-2xl"
-                />
-                <div className="p-4">
-                  <h3 className="text-xl font-medium">Project {item}</h3>
-                  <p className="text-sm text-gray-600">Short description of the project.</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-12">
+    <h2 class="text-3xl font-semibold mb-8 text-center">My Work</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Portfolio Items -->
+      <div class="hover:scale-105 transition-transform rounded-2xl shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Project 1" class="w-full" />
+        <div class="p-4">
+          <h3 class="text-xl font-medium">Project 1</h3>
+          <p class="text-sm text-gray-600">Short description of the project.</p>
         </div>
-      </section>
+      </div>
 
-      {/* Contact Section */}
-      <section className="py-16 text-center bg-gray-100 rounded-2xl">
-        <h2 className="text-3xl font-semibold mb-4">Let's Work Together</h2>
-        <p className="mb-6">Have a project in mind? I'd love to hear from you!</p>
-        <Button variant="outline" className="text-lg px-6 py-2">Contact Me</Button>
-      </section>
-    </main>
-  );
-} 
+      <!-- Repeat for more items -->
+      <!-- You can duplicate this block and change the text/image -->
+      <div class="hover:scale-105 transition-transform rounded-2xl shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Project 2" class="w-full" />
+        <div class="p-4">
+          <h3 class="text-xl font-medium">Project 2</h3>
+          <p class="text-sm text-gray-600">Short description of the project.</p>
+        </div>
+      </div>
 
+      <!-- ... add more as needed -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 text-center bg-gray-100 rounded-2xl mt-12">
+    <h2 class="text-3xl font-semibold mb-4">Let's Work Together</h2>
+    <p class="mb-6">Have a project in mind? I'd love to hear from you!</p>
+    <a href="mailto:your-email@example.com" class="border border-black px-6 py-2 text-lg rounded hover:bg-black hover:text-white transition">Contact Me</a>
+  </section>
+
+</body>
+</html>
